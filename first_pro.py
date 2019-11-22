@@ -8,7 +8,9 @@ def hello_world():
 
 @app.route('/home')
 def home():
-    return 'Turabit Solution PVT. LTD.'
+    return '''
+    <h1>Turabit Solution PVT. LTD.</h1>
+    '''
 
 @app.route('/about')
 @app.route('/about us')
@@ -42,10 +44,12 @@ def projects():
 @app.route('/user1/<username>')
 def user(username):
 # show the user profile for that user
-    return render_template('first_pro.html')
+    return render_template('first_pro.html', username= username)
 
-
-
+@app.route('/user2/')
+@app.route('/user2/<name>')
+def user2(name=None): # here name = none is very imp. 
+    return render_template('hello_from_flask.html', name= name)
 
 if __name__=='__main__':
     app.run(debug=True)
