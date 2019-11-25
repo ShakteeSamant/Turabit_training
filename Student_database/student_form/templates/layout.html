@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-    <title>Title</title>
+    <title>CRUD Operation</title>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -14,29 +14,36 @@
 </head>
 <body>
 <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
-        <a class="navbar-brand" rel="home" href="{{ url_for('home') }}" title="home">
-            <!--<img src="F:\Python_Projects\TRAINING\My_project\application\static\images\myapp.jpg">-->
-        </a>
-        <a class="navbar-brand" href="{{ url_for('home') }}">Student Form Fill-up</a>
+    <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" rel="home" href="{{ url_for('home') }}" title="home"><img src="\static\img\download.png"
+                                                                                          height="42" width="42"></a>
+        <a class="navbar-brand" href="{{ url_for('home') }}"><h1>Application Form</h1></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ url_for('home') }}">Form <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ url_for('home') }}"><i class="fa fa-home"></i>Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-envelope-o"></i>Action</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ url_for('form') }}">Add Student</a>
+                        <a class="dropdown-item" href="#">Update Student</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Delete</a>
+                    </div>
                 </li>
             </ul>
         </div>
-</div>
-<div class="container">
-    {% block content %}{% endblock %}
-</div>
-
-</nav>
+    </nav>
+    <div class="container">
+            {% block content %}{% endblock %}
+    </div>
 
 </body>
 </html>
