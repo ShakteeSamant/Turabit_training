@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Form Page</h1>
+    <form method= post>
+    <dl>
+      <dt>Name:
+      <dd><input type=text name=username value="{{
+          request.form.name }}">
+      <dt>Roll No.:
+      <dd><input type=text name=username value="{{
+          request.form.roll_no }}">
+      <dt>Semester:
+      <dd><input type=text name=username value="{{
+          request.form.sem }}">
+      <dt>Contact Number:
+      <dd><input type=text name=username value="{{
+          request.form.mob_no }}">
+      <dt>Email_id:
+      <dd><input type=text name=username value="{{
+          request.form.email }}">
+        <br>
+        <p><input type=submit value=Submit>
+    </dl>
+{% endblock %}
