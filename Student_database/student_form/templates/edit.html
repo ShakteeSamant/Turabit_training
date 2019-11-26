@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<center>
+    <h1>Edit Student</h1>
+    <h1>Update Page</h1>
+</center>
+
+    <form method="POST" action="{{ url_for('update', s_id = request.s_id)}}">
+    <dl>
+      <dt>S ID:
+      <dd><input type=text name="new_s_id" id="new_s_id"  value="{{ request.s_id }}" disabled>
+      <dt>Name:
+      <dd><input type=text name="new_name" id="new_name"  value="{{ request.s_name }}">
+      <dt>Roll No.:
+      <dd><input type=text name="new_roll_no" id="new_roll_no" value="{{ request.s_roll_no }}">
+      <dt>Semester:
+      <dd><input type=text name="new_sem" id ='new_sem' value="{{ request.s_sem }}">
+      <dt>Contact Number:
+      <dd><input type=text name='new_mob_no' id = 'new_mob_no' value="{{ request.s_mob_no }}">
+      <dt>Email_id:
+      <dd><input type=text name='new_email' id="new_email" value="{{ request.s_email }}">
+        <br>
+        <br>
+        <p><input type=submit value=Update >
+    </dl>
+{% endblock %}

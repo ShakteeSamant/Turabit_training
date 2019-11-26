@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Student Added</h1>
+<form method="GET" action="{{ url_for('form') }}">
+    <dl>
+        <dt>Name: {{ name }}
+        <dt>Roll No.: {{ roll_no }}
+        <dt>Semester: {{ sem }}
+        <dt>Contact Number: {{ mob_no }}
+        <dt>Email_id: {{ email }}
+    </dl>
+    <input type=submit value='Add Another'>
+</form>
+<br>
+<form action="{{ url_for('home') }}">
+    <input type=submit value='Exit'>
+</form>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Student List</h1>
+<form method="POST" action="">
+    <dl>
+        <table>
+            <thead>
+            <tr>
+                <th>SID</th>
+                <th>NAME</th>
+                <th>RollNO</th>
+                <th>SEM</th>
+                <th>MOBILE</th>
+                <th>EMAIL</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for student in list_ %}
+            <tr>
+                <td>{{ student.s_id }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.roll_no }}</td>
+                <td>{{ student.sem }}</td>
+                <td>{{ student.mob_no }}</td>
+                <td>{{ student.email }}</td>
+                <td>
+                    <a class="btn btn-sm btn-info" href="{{ url_for('edit', s_id=student.s_id) }}"
+                       id="{{ student.s_id }}" name="{{ student.s_id }}">Edit</a>
+                    <a class="btn btn-sm btn-info" href="{{ url_for('delete', s_id=student.s_id) }}"
+                       id="{{ student.s_id }}" name="{{ student.s_id }}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </dl>
+</form>
+{% endblock %}
