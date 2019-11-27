@@ -19,10 +19,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" rel="home" href="{{ url_for('home') }}" title="home">
-        <img src="F:\Python_Projects\TRAINING\My_project\application\static\images\myapp.jpg">
-    </a>
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+<!--    <a class="navbar-brand" rel="home" href="{{ url_for('home') }}" title="home">-->
+<!--        <img src="\static\img\download.png" height="42" width="42"></a>-->
+<nav class="navbar navbar-icon-top navbar-expand-lg navbar-blur bg-dark">
+    <a class="navbar-brand" rel="home" href="{{ url_for('home') }}" title="home"><img src="\static\images\MyFirstApp.png" height="42" width="42"></a>
     <a class="navbar-brand" href="{{ url_for('hello') }}">MY APP</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,15 +49,15 @@
         </ul>
     </div>
 </nav>
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <ul class=flashes>
-        {% for message in messages %}
-        <li>{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-    {% endwith %}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul class=flashes>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
 
 
 <div class="container">
