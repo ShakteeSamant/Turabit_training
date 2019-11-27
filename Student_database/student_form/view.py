@@ -48,8 +48,8 @@ def update(s_id):
         new_sem = request.form['new_sem']
         new_mob_no = request.form['new_mob_no']
         new_email = request.form['new_email']
-        student = Student_info.query.filter_by(s_id=s_id).update(dict(name = new_name,roll_no = new_roll_no,sem = new_sem,mob_no = new_mob_no,email = new_email))
-        print(student)
+        student = Student_info.query.filter_by(s_id=s_id).update(
+            dict(name=new_name, roll_no=new_roll_no, sem=new_sem, mob_no=new_mob_no, email=new_email))
         db.session.commit()
     return redirect(url_for('student_list'))
 

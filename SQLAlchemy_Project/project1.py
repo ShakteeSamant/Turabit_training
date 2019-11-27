@@ -28,38 +28,7 @@ class User(db.Model):
 #         super(Foo, self).__init__(**kwargs)
 #         # do custom stuff
 
-# flask_env) E:\Turabit_Training\my_project\SQLAlchemy_Project>python -m pip install --upgrade pip
-# Collecting pip
-#   Downloading https://files.pythonhosted.org/packages/00/b6/9cfa56b4081ad13874b0c6f96af8ce16cfbc1cb06bedf8e9164ce5551ec1/pip-19.3.1-py2.py3-none-any.whl (1.4MB)
-#     100% |████████████████████████████████| 1.4MB 527kB/s
-# Installing collected packages: pip
-#   Found existing installation: pip 10.0.1
-#     Uninstalling pip-10.0.1:
-#       Successfully uninstalled pip-10.0.1
-#   Rolling back uninstall of pip
-# Exception:
-# Traceback (most recent call last):
-#   File "E:\Turabit_Training\flask_env\lib\site-packages\pip-10.0.1-py3.6.egg\pip\_internal\basecommand.py", line 228, in main
-#     status = self.run(options, args)
-#   File "E:\Turabit_Training\flask_env\lib\site-packages\pip-10.0.1-py3.6.egg\pip\_internal\commands\install.py", line 335, in run
-#     use_user_site=options.use_user_site,
-#   File "E:\Turabit_Training\flask_env\lib\site-packages\pip-10.0.1-py3.6.egg\pip\_internal\req\__init__.py", line 49, in install_given_reqs
-#     **kwargs
-#   File "E:\Turabit_Training\flask_env\lib\site-packages\pip-10.0.1-py3.6.egg\pip\_internal\req\req_install.py", line 748, in install
-#     use_user_site=use_user_site, pycompile=pycompile,
-#   File "E:\Turabit_Training\flask_env\lib\site-packages\pip-10.0.1-py3.6.egg\pip\_internal\req\req_install.py", line 961, in move_wheel_files
-#     warn_script_location=warn_script_location,
-#   File "E:\Turabit_Training\flask_env\lib\site-packages\pip-10.0.1-py3.6.egg\pip\_internal\wheel.py", line 431, in move_wheel_files
-#     generated.extend(maker.make(spec))
-#   File "E:\Turabit_Training\flask_env\lib\site-packages\pip-10.0.1-py3.6.egg\pip\_vendor\distlib\scripts.py", line 403, in make
-#     self._make_script(entry, filenames, options=options)
-#   File "E:\Turabit_Training\flask_env\lib\site-packages\pip-10.0.1-py3.6.egg\pip\_vendor\distlib\scripts.py", line 307, in _make_script
-#     self._write_script(scriptnames, shebang, script, filenames, ext)
-#   File "E:\Turabit_Training\flask_env\lib\site-packages\pip-10.0.1-py3.6.egg\pip\_vendor\distlib\scripts.py", line 243, in _write_script
-#     launcher = self._get_launcher('t')
-#   File "E:\Turabit_Training\flask_env\lib\site-packages\pip-10.0.1-py3.6.egg\pip\_vendor\distlib\scripts.py", line 382, in _get_launcher
-#     result = finder(distlib_package).find(name).bytes
-# AttributeError: 'NoneType' object has no attribute 'bytes'
+
 #
 # (flask_env) E:\Turabit_Training\my_project\SQLAlchemy_Project>python
 # Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:54:40) [MSC v.1900 64 bit (AMD64)] on win32
