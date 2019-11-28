@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+    <h1>ADD Book</h1>
+</div>
+
+<div>
+    <form method="POST" action="{{ url_for('addbook') }}">
+        {{ form.hidden_tag() }}
+        <dl>
+            <dt>{{ form.id.label }}
+                <dd>{{ form.id(class="form-control form-control-lg") }}</dd>
+            <dt>{{ form.name.label }}
+                <dd>{{ form.name(class="form-control form-control-lg") }}</dd>
+            </dt>
+            <dt>{{ form.author.label }}
+                <dd>{{ form.author(class="form-control form-control-lg") }}</dd>
+            </dt>
+            <dt>{{ form.price.label }}
+                <dd>{{ form.price(class="form-control form-control-lg") }}</dd>
+            </dt>
+        </dl>
+        <br>
+        <div >
+            {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+    </form>
+</div>
+
+{% endblock %}

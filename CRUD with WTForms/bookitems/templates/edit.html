@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+    <h1>Edit Book</h1>
+</div>
+
+<div>
+    <form method="POST" action="{{ url_for('update', id=form.id.data )}}">
+        {{ form.hidden_tag() }}
+        <dl>
+            <dt>{{ form.id.label }}  </dt>
+            <dd>{{ form.id(class="form-control form-control-lg") }}</dd>
+            <dt>{{ form.name.label }}  </dt>
+            <dd>{{ form.name(class="form-control form-control-lg") }}</dd>
+            <dt>{{ form.author.label }}  </dt>
+            <dd>{{ form.author(class="form-control form-control-lg") }}</dd>
+            <dt>{{ form.price.label }}  </dt>
+            <dd>{{ form.price(class="form-control form-control-lg") }}</dd>
+        </dl>
+        <br>
+        <div>
+            {{ form.update(class="btn btn-outline-info") }}
+        </div>
+    </form>
+</div>
+
+{% endblock %}
