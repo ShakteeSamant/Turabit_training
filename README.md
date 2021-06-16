@@ -1,2 +1,2 @@
-# Turabit_training
+# Training
 Code while Training
